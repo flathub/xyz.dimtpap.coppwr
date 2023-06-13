@@ -74,8 +74,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/dimtpap/coppwr/releases/download/1.0.1/coppwr-1.0.1-vendor.tar.gz",
-					"sha256": "6aba6202cc1337fb85eb528d7833aac49c2b298e9bc4a18acbc195f3b7487063"
+					"url": "https://github.com/dimtpap/coppwr/releases/download/1.1.0/coppwr-1.1.0-vendor.tar.gz",
+					"sha256": "65415c2e22cae0d9767d80bad720314dab82ae3f67f0ff9847622259ab1d36fb"
 				}
 			]
 		}
