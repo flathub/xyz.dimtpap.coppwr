@@ -56,8 +56,8 @@
 				{
 					"type": "git",
 					"url": "https://gitlab.freedesktop.org/pipewire/pipewire.git",
-					"tag": "0.3.71",
-					"commit": "bd225b14bbda1a6e2dc7a52780eaf728920e0ff2"
+					"tag": "0.3.77",
+					"commit": "31cd694602cc37ada3a6d02a5a381f4e3933ecef"
 				}
 			]
 		},
@@ -65,7 +65,7 @@
 			"name": "coppwr",
 			"buildsystem": "simple",
 			"build-commands": [
-				"cargo install --locked --path . --root /app --no-track",
+				"cargo install --locked --path . --root /app --no-track --all-features",
 				"install -Dm644 LICENSE /app/share/licenses/coppwr/LICENSE",
 				"install -Dm644 assets/xyz.dimtpap.coppwr.desktop /app/share/applications/xyz.dimtpap.coppwr.desktop",
 				"install -Dm644 assets/xyz.dimtpap.coppwr.metainfo.xml /app/share/metainfo/xyz.dimtpap.coppwr.metainfo.xml",
@@ -74,8 +74,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/dimtpap/coppwr/releases/download/1.1.0/coppwr-1.1.0-vendor.tar.gz",
-					"sha256": "65415c2e22cae0d9767d80bad720314dab82ae3f67f0ff9847622259ab1d36fb"
+					"url": "https://github.com/dimtpap/coppwr/releases/download/1.1.1/coppwr-1.1.1-vendor.tar.gz",
+					"sha256": "21a5bc8ae8bb53f598bb8a7ee2fb3d3e698883d0717325ff8b708775dbccde0f"
 				}
 			]
 		}
