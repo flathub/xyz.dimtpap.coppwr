@@ -1,7 +1,7 @@
 {
 	"app-id": "xyz.dimtpap.coppwr",
 	"runtime": "org.freedesktop.Platform",
-	"runtime-version": "22.08",
+	"runtime-version": "23.08",
 	"sdk": "org.freedesktop.Sdk",
 	"sdk-extensions": [
 		"org.freedesktop.Sdk.Extension.rust-stable",
@@ -15,6 +15,9 @@
 		"--share=ipc",
 		"--filesystem=xdg-run/pipewire-0"
 	],
+	"rename-desktop-file": "io.github.dimtpap.coppwr.desktop",
+	"rename-appdata-file": "io.github.dimtpap.coppwr.metainfo.xml",
+	"rename-icon": "io.github.dimtpap.coppwr",
 	"build-options": {
 		"append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm16/bin",
 		"prepend-ld-library-path": "/usr/lib/sdk/llvm16/lib"
@@ -56,8 +59,8 @@
 				{
 					"type": "git",
 					"url": "https://gitlab.freedesktop.org/pipewire/pipewire.git",
-					"tag": "0.3.77",
-					"commit": "31cd694602cc37ada3a6d02a5a381f4e3933ecef"
+					"tag": "0.3.79",
+					"commit": "b5c3f217926f9066a1afbee7eb20967dd6896c56"
 				}
 			]
 		},
@@ -67,17 +70,22 @@
 			"build-commands": [
 				"cargo install --locked --path . --root /app --no-track --all-features",
 				"install -Dm644 LICENSE /app/share/licenses/coppwr/LICENSE",
-				"install -Dm644 assets/xyz.dimtpap.coppwr.desktop /app/share/applications/xyz.dimtpap.coppwr.desktop",
-				"install -Dm644 assets/xyz.dimtpap.coppwr.metainfo.xml /app/share/metainfo/xyz.dimtpap.coppwr.metainfo.xml",
-				"install -Dm644 assets/icon/scalable.svg /app/share/icons/hicolor/scalable/apps/xyz.dimtpap.coppwr.svg"
+				"install -Dm644 assets/io.github.dimtpap.coppwr.desktop /app/share/applications/io.github.dimtpap.coppwr.desktop",
+				"install -Dm644 assets/io.github.dimtpap.coppwr.metainfo.xml /app/share/metainfo/io.github.dimtpap.coppwr.metainfo.xml",
+				"install -Dm644 assets/icon/scalable.svg /app/share/icons/hicolor/scalable/apps/io.github.dimtpap.coppwr.svg"
 			],
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/dimtpap/coppwr/releases/download/1.2.0/coppwr-1.2.0-vendor.tar.gz",
-					"sha256": "d4839941769b871a66aed3de74d256502729f59ce8db90196923f06d8cdbe67f"
+					"url": "https://github.com/dimtpap/coppwr/releases/download/1.3.0/coppwr-1.3.0-vendor.tar.gz",
+					"sha256": "a47e6602e6f8bc45454424d29fbb72368414c7ec5a4ef063539236aafa572e3f"
+				},
+				{
+					"type": "patch",
+					"path": "change-desktop-id.patch"
 				}
 			]
 		}
 	]
 }
+
